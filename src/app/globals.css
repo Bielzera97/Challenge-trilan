@@ -2,32 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.full-body{
+    background-color: rgba(18, 18, 18, 1);
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.input-section{
+    background-color: rgba(25, 25, 25, 1);
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.input-css{
+    background-color: rgba(25, 25, 25, 1);
+    outline: none;
+    
+}
+.input-css::placeholder{
+    color: rgba(49, 49, 49, 1);
+}
+.filter-button{
+    background-color: #191919;
+}
+.filter-button:hover, .search-button:hover {
+    background-color: rgba(49, 49, 49, 1);
+}
+.search-button{
+    background-color: rgba(35, 35, 35, 1);
 }
