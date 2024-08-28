@@ -5,7 +5,7 @@ import UpComingCarousel from "@/components/UpcomingCarousel";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center p-4">
+    <main className="flex flex-col justify-center items-center ">
       <MainMovies/>
       <UpComingCarousel/>
       <RecMovies/>

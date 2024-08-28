@@ -38,7 +38,7 @@ const RecMovies = () => {
   return (
     <>
       {upMovies.length > 0 ? (
-        <main className="w-full">
+        <main className="">
           <section className="flex justify-between">
             <h1>Recomendados</h1>
             <section className="flex gap-1">
@@ -46,7 +46,7 @@ const RecMovies = () => {
                 <button onClick={handleNext}>Next</button>
             </section>
           </section>
-          <section className="flex justify-center w-full">
+          <section className="flex justify-center ">
             {upMovies.slice(currentIndex, currentIndex + 4).map((movie: any) => {
               const voteAverage = movie.vote_average?.toString();
               const firstDecimal =

@@ -38,7 +38,7 @@ const Actors = () => {
   return (
     <>
       {actors.length > 0 ? (
-        <main className="box-border w-full ">
+        <main className="w-full">
           <section className="flex justify-between">
             <h1>Celebridades</h1>
             <section className="flex gap-1">
@@ -46,7 +46,7 @@ const Actors = () => {
                 <button onClick={handleNext}>Next</button>
             </section>
           </section>
-          <section className="flex justify-center">
+          <section className="flex justify-center gap-2">
             {actors.slice(currentIndex, currentIndex + 5).map((movie: any) => {
               const voteAverage = movie.vote_average?.toString();
               const firstDecimal =
@@ -55,7 +55,7 @@ const Actors = () => {
                   : "N/A";
 
               return (
-                <section key={movie.id} className="min-w-[150px] min-h-[200px] relative bg-cover bg-center" style={{backgroundImage : `url(https://image.tmdb.org/t/p/original${movie.profile_path})`}}>
+                <section key={movie.id} className="min-w-[195px] min-h-[150px] relative bg-cover bg-center rounded-lg" style={{backgroundImage : `url(https://image.tmdb.org/t/p/original${movie.profile_path})`}}>
                   <h1>{movie.name}</h1>
                 </section>
               );

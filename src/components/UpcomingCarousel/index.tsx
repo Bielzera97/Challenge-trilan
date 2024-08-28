@@ -38,7 +38,7 @@ const UpComingCarousel = () => {
   return (
     <>
       {upMovies.length > 0 ? (
-        <main className="w-full ">
+        <main className=" ">
           <section className="flex justify-between">
             <h1>Ultimos Lançamentos</h1>
             <section className="flex gap-1">
