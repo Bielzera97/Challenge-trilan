@@ -1,3 +1,4 @@
+import Actors from "@/components/Actors";
 import MainMovies from "@/components/MainMovies";
 import RecMovies from "@/components/RecMovies";
 import UpComingCarousel from "@/components/UpcomingCarousel";
@@ -8,6 +9,7 @@ export default function Home() {
       <MainMovies/>
       <UpComingCarousel/>
       <RecMovies/>
+      <Actors/>
     </main>
   );
 }

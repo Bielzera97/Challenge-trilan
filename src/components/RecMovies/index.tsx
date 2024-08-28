@@ -27,7 +27,7 @@ const RecMovies = () => {
   const getRecMovies = () => {
     axios({
       method: "get",
-      url: "https://api.themoviedb.org/3/trending/movie/day?language=pt-BR",
+      url: "https://api.themoviedb.org/3/trending/movie/week?language=pt-BR",
       params: {
         api_key: "5d48829e19bb27c3fb9da618b8e0115b",
         language: "pt-br",
@@ -38,7 +38,7 @@ const RecMovies = () => {
   return (
     <>
       {upMovies.length > 0 ? (
-        <main>
+        <main className="w-full">
           <section className="flex justify-between">
             <h1>Recomendados</h1>
             <section className="flex gap-1">
@@ -46,7 +46,7 @@ const RecMovies = () => {
                 <button onClick={handleNext}>Next</button>
             </section>
           </section>
-          <section className="flex ">
+          <section className="flex justify-center w-full">
             {upMovies.slice(currentIndex, currentIndex + 4).map((movie: any) => {
               const voteAverage = movie.vote_average?.toString();
               const firstDecimal =

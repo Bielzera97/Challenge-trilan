@@ -25,7 +25,7 @@ const MainMovies = () => {
 
     return(
         <>
-        {movies.length > 0 ? <main className="grid grid-cols-3 gap-2">
+        {movies.length > 0 ? <main className="grid grid-cols-3 gap-2 w-full">
         <section className="col-span-2 bg-cover bg-center rounded-xl pt-32" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[0].poster_path})`}}>
             <h1>Em destaque</h1>
             <h1>{movies[0].original_title}</h1>
