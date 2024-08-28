@@ -23,8 +23,6 @@ const MainMovies = () => {
         }).then((res) => setMovies(res.data.results))
     }
 
-
-    console.log(movies)
     return(
         <>
         {movies.length > 0 ? <main className="grid grid-cols-3 gap-2">
@@ -39,17 +37,17 @@ const MainMovies = () => {
         <section className="col-span-1">
             Destaques
             <ul className="flex flex-col gap-2">
-                <li className="bg-cover bg-center rounded-lg" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[1].poster_path})`}}>
+                <li className="bg-cover bg-center rounded-lg " style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[1].poster_path})`}}>
                     <h2>{movies[1].vote_average.toString().match(/^\d+\.(\d)/)[0]}</h2>
                     <h1>{movies[1].original_title}</h1>
                     <a href="">Assista o Trailer</a>
                 </li>
-                <li className="bg-cover bg-center rounded-lg" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[2].poster_path})`}}>
+                <li className="bg-cover bg-center rounded-lg " style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[2].poster_path})`}}>
                     <h2>{movies[2].vote_average.toString().match(/^\d+\.(\d)/)[0]}</h2>
                     <h1>{movies[2].original_title}</h1>
                     <a href="">Assista o Trailer</a>
                 </li>
-                <li className="bg-cover bg-center rounded-lg" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[3].poster_path})`}}>
+                <li className="bg-cover bg-center rounded-lg " style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[3].poster_path})`}}>
                     <h2>{movies[3].vote_average.toString().match(/^\d+\.(\d)/)[0]}</h2>
                     <h1>{movies[3].original_title}</h1>
                     <a href="">Assista o Trailer</a>

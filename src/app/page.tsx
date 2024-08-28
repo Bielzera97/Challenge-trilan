@@ -1,4 +1,5 @@
 import MainMovies from "@/components/MainMovies";
+import RecMovies from "@/components/RecMovies";
 import UpComingCarousel from "@/components/UpcomingCarousel";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="flex flex-col justify-center items-center p-4">
       <MainMovies/>
       <UpComingCarousel/>
+      <RecMovies/>
     </main>
   );
 }

@@ -2,8 +2,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const UpComingCarousel = () => {
-  const [upMovies, setUpMovies] = useState<any[]>([]);
+const RecMovies = () => {
+  const [upMovies, setRecMovies] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -21,18 +21,18 @@ const UpComingCarousel = () => {
   }
 
   useEffect(() => {
-    getUpMovies();
+    getRecMovies();
   }, []);
 
-  const getUpMovies = () => {
+  const getRecMovies = () => {
     axios({
       method: "get",
-      url: "https://api.themoviedb.org/3/movie/upcoming?language=pt-BR&page=1",
+      url: "https://api.themoviedb.org/3/trending/movie/day?language=pt-BR",
       params: {
         api_key: "5d48829e19bb27c3fb9da618b8e0115b",
         language: "pt-br",
       },
-    }).then((res) => setUpMovies(res.data.results));
+    }).then((res) => setRecMovies(res.data.results));
   };
 
   return (
@@ -40,7 +40,7 @@ const UpComingCarousel = () => {
       {upMovies.length > 0 ? (
         <main>
           <section className="flex justify-between">
-            <h1>Ultimos Lançamentos</h1>
+            <h1>Recomendados</h1>
             <section className="flex gap-1">
                 <button onClick={handlePrevious}>Previous</button>
                 <button onClick={handleNext}>Next</button>
@@ -71,4 +71,4 @@ const UpComingCarousel = () => {
   );
 };
 
-export default UpComingCarousel;
+export default RecMovies;
