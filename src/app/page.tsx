@@ -5,11 +5,12 @@ import UpComingCarousel from "@/components/UpcomingCarousel";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center ">
-      <MainMovies/>
-      <UpComingCarousel/>
-      <RecMovies/>
-      <Actors/>
+    <main className="px-4">
+        <MainMovies />
+        <UpComingCarousel />
+        <RecMovies />
+        <Actors />
     </main>
+
   );
 }

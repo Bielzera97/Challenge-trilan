@@ -24,5 +24,12 @@
     background-color: rgba(49, 49, 49, 1);
 }
 .search-button{
-    background-color: rgba(35, 35, 35, 1);
+    background-color: rgb(56, 56, 56);
 }
+
+.nav_button:hover{
+    background-color: rgb(56, 56, 56)   ;
+    transition: 0.1s;
+}
+
+
