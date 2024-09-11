@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 const UpComingCarousel = () => {
   const [actors, setActors] = useState<any[]>([]);
@@ -35,25 +36,24 @@ const UpComingCarousel = () => {
     }).then((res) => setActors(res.data.results));
   };
 
-  console.log(actors)
   return (
     <>
       {actors.length > 0 ? (
-        <main className="">
+        <main className="py-4">
           <section className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold">Celebridades</h1>
+          <h1 className="border-l-4 pl-2 mb-2 text-2xl text-white font-semibold">Celebridades</h1>
             <section className="flex gap-4">
               <button
-                className="bg-gray-300 p-2 rounded"
+                className="p-2 rounded-full duration-150 active:text-sm"
                 onClick={handlePrevious}
               >
-                Previous
+                <SlArrowLeft/>
               </button>
               <button
-                className="bg-gray-300 p-2 rounded"
+                className="p-2 rounded-full duration-150 active:text-sm"
                 onClick={handleNext}
               >
-                Next
+                <SlArrowRight/>
               </button>
             </section>
           </section>
@@ -72,12 +72,12 @@ const UpComingCarousel = () => {
                 return (
                   <section
                     key={movie.id}
-                    className="min-w-[25%] min-h-[150px] relative bg-cover bg-center mx-2"
+                    className="min-w-[25%] min-h-[150px] relative bg-cover bg-center mx-2 rounded-xl flex flex-col justify-end p-3"
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.profile_path})`,
                     }}
                   >
-                    <h1 className="text-white">{movie.name}</h1>
+                    <h1 className="text-white font-semibold">{movie.name}</h1>
                   </section>
                 );
               })}

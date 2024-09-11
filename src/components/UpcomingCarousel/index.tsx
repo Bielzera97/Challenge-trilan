@@ -1,6 +1,10 @@
 "use client";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
+import {BiSolidRightArrow} from "react-icons/bi"
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
+
 
 const UpComingCarousel = () => {
   const [upMovies, setUpMovies] = useState<any[]>([]);
@@ -35,24 +39,25 @@ const UpComingCarousel = () => {
     }).then((res) => setUpMovies(res.data.results));
   };
 
+  console.log(upMovies)
   return (
     <>
       {upMovies.length > 0 ? (
         <main className="">
           <section className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold">Últimos Lançamentos</h1>
+          <h1 className="border-l-4 pl-2 mb-2 text-2xl text-white font-semibold">Últimos lançamentos</h1>
             <section className="flex gap-4">
               <button
-                className="bg-gray-300 p-2 rounded"
+                className="p-2 rounded-full duration-150 active:text-sm"
                 onClick={handlePrevious}
               >
-                Previous
+                <SlArrowLeft/>
               </button>
               <button
-                className="bg-gray-300 p-2 rounded"
+                className="p-2 rounded-full duration-150 active:text-sm"
                 onClick={handleNext}
               >
-                Next
+                <SlArrowRight/>
               </button>
             </section>
           </section>
@@ -74,19 +79,29 @@ const UpComingCarousel = () => {
                     : "N/A";
 
                 return (
+                  
                   <section
                     key={movie.id}
-                    className="min-w-[25%] min-h-[150px] relative bg-cover bg-center mx-2"
+                    className="min-w-[25%] min-h-[175px] relative bg-cover bg-center mx-2 rounded-2xl flex flex-col justify-between p-2"
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
                     }}
                   >
-                    <h2 className="text-white">{firstDecimal}</h2>
-                    <h1 className="text-white">{movie.title}</h1>
-                    <a href="#" className="link link-primary">
-                      Assista o Trailer
-                    </a>
+                    <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <section className="relative flex opacity-100 ">
+                        <h2 className="flex items-center gap-1 text-lg px-1 text-white bg-white/20 font-semibold rounded-md backdrop-blur">
+                            <FaStar className="text-yellow-300" />
+                            {firstDecimal}
+                        </h2>
+                    </section>
+                    <section>
+                        <h1 className="relative text-white font-semibold">{movie.title}</h1>
+                        <section className="flex pt-1">
+                            <a href="" className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
+                        </section>
+                    </section>
                   </section>
+                  
                 );
               })}
             </div>

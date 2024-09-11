@@ -5,7 +5,7 @@ import UpComingCarousel from "@/components/UpcomingCarousel";
 
 export default function Home() {
   return (
-    <main className="px-4">
+    <main className="px-6">
         <MainMovies />
         <UpComingCarousel />
         <RecMovies />
