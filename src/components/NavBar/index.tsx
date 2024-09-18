@@ -6,10 +6,10 @@ import { IoSearch } from "react-icons/io5";
 
 const NavBar = () => {
     return(
-        <section className="flex items-center px-4 py-2">
+        <section className="flex items-center px-6 py-2">
         <Image 
                 alt="Logo"
-                src={'/Logo.svg'}
+                src={'/Logo.png'}
                 width={128}
                 height={34.88}
         />

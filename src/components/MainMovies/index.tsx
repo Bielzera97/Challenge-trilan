@@ -20,7 +20,7 @@ const MainMovies = () => {
     const getMovies = () => {
         axios({
             method:'get',
-            url : "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
+            url : "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc",
             params: {
                 api_key :'5d48829e19bb27c3fb9da618b8e0115b',
                 language : 'pt-br'

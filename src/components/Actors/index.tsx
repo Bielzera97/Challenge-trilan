@@ -36,8 +36,11 @@ const UpComingCarousel = () => {
     }).then((res) => setActors(res.data.results));
   };
 
+  console.log(actors)
+
   return (
     <>
+
       {actors.length > 0 ? (
         <main className="py-4">
           <section className="flex justify-between items-center mb-4">
@@ -77,7 +80,7 @@ const UpComingCarousel = () => {
                       backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.profile_path})`,
                     }}
                   >
-                    <h1 className="text-white font-semibold">{movie.name}</h1>
+                    <h1 className="text-white font-semibold"><a href={`/actors/${movie.id}`}>{movie.name}</a></h1>
                   </section>
                 );
               })}
