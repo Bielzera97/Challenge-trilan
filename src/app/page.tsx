@@ -7,7 +7,6 @@ import NavBar from "@/components/NavBar";
 export default function Home() {
   return (
     <main className="px-6">
-        <NavBar value={""} onChange={""} />
         <MainMovies />
         <UpComingCarousel />
         <RecMovies />
