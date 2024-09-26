@@ -36,7 +36,7 @@ const UpComingCarousel = () => {
     }).then((res) => setActors(res.data.results));
   };
 
-  console.log(actors)
+  
 
   return (
     <>

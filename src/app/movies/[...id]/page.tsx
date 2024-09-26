@@ -42,8 +42,8 @@ const Movies = () => {
       }  
 
     return(
-        <main>
-            <img src={`https://image.tmdb.org/t/p/original${movies.backdrop_path}`} alt="" />
+        <main className="flex ">
+            <img src={`https://image.tmdb.org/t/p/original${movies.poster_path}`} alt="" />
             <h1>{movies.title}</h1>
             <p>{movies.overview}</p>
         </main>

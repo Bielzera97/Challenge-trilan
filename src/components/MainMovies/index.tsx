@@ -42,7 +42,7 @@ const MainMovies = () => {
             </section>
             <p className="text-white text-sm">{movies[0].overview}</p>
             <section className="flex pt-10">
-                <a href="" className="px-2 py-1 text-lg flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
+                <a href={`/movies/${movies[0].id}`} className="px-2 py-1 text-lg flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
             </section>
         </section>
         <section className="col-span-1">
@@ -59,7 +59,7 @@ const MainMovies = () => {
                     <section>
                         <h1 className="relative text-lg text-white font-semibold">{movies[1].original_title}</h1>
                         <section className="flex pt-1">
-                            <a href="" className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
+                            <a href={`/movies/${movies[1].id}`}  className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
                         </section>
                     </section>
                 </li>
@@ -74,7 +74,7 @@ const MainMovies = () => {
                     <section>
                         <h1 className="relative text-lg text-white font-semibold">{movies[2].original_title}</h1>
                         <section className="flex pt-1">
-                            <a href="" className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
+                            <a href={`/movies/${movies[2].id}`}  className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
                         </section>
                     </section>
                 </li>
@@ -89,7 +89,7 @@ const MainMovies = () => {
                     <section>
                         <h1 className="relative text-lg text-white font-semibold">{movies[3].original_title}</h1>
                         <section className="flex pt-1">
-                            <a href="" className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
+                            <a href={`/movies/${movies[3].id}`}  className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
                         </section>
                     </section>
                 </li>

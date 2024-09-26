@@ -38,23 +38,11 @@ const Test = () => {
   }
   console.log(test)
   return (
-    <main>
-      <NavBar/>
-      <section>
-        {test && (
-          <section className="grid grid-cols-3">
-            <section className="col-span-2">section</section>
-            <section className="col-span-1">
-              <img
-                src={`https://image.tmdb.org/t/p/original${test.profile_path}`}
-                alt={test.name}
-              />
-              <h1>{test.name}</h1>
-              <p>{test.biography}</p>
-            </section>
-          </section>
-        )}
-      </section>
+    <main className="flex">
+      <img src={`https://image.tmdb.org/t/p/original${test.profile_path}`} alt="" width={300} />
+      <h1>{test.name}</h1>
+      <p>{test.biography}</p>
+      
     </main>
   );
 };

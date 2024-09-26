@@ -97,7 +97,7 @@ const UpComingCarousel = () => {
                     <section>
                         <h1 className="relative text-white font-semibold">{movie.title}</h1>
                         <section className="flex pt-1">
-                            <a href="" className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
+                            <a href={`/movies/${movie.id}`} className="px-2 py-1 flex items-center text-white gap-2 font-semibold backdrop-blur rounded bg-white/10 ">Assista o Trailer <BiSolidRightArrow/></a>
                         </section>
                     </section>
                   </section>
